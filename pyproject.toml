@@ -1,0 +1,28 @@
+[project]
+name = "image-check"
+version = "0.1.0"
+description = "POC for BuySell fraud detection."
+readme = "README.md"
+requires-python = "==3.14.*"
+dependencies = [
+    "click>=8.3.3",
+    "gradio>=6.13.0",
+    "ipython>=9.12.0",
+    "open-clip-torch>=3.3.0",
+    "opencv-python>=4.13.0.92",
+    "pyexiftool>=0.5.6",
+    "rich>=15.0.0",
+    "ultralytics>=8.4.41",
+]
+
+[project.scripts]
+ic = "ic.cli:cli"
+
+[build-system]
+requires = ["uv_build>=0.11.7,<0.12"]
+build-backend = "uv_build"
+
+
+[tool.uv.build-backend]
+module-name = "ic"
+module-root = "src"
