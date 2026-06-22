@@ -5,8 +5,8 @@ import rich
 
 import cv2
 
-from ic import models
-from ic import settings
+from ic.video import models
+from ic.video import settings
 
 
 @click.group()
