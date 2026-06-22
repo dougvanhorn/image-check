@@ -11,8 +11,8 @@ from ultralytics import YOLO
 from dataclasses import dataclass, field
 from typing import Optional
 
-from ic import settings
-from ic import utils
+from ic.video import settings
+from ic.video import utils
 
 
 # ----- Models loaded once at module level -----

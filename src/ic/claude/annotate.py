@@ -3,7 +3,7 @@ from pathlib import Path
 
 import cv2
 
-from ic import models
+from ic.video import models
 
 
 BICYCLE_CLASS = 1

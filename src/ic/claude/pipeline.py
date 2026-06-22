@@ -13,7 +13,7 @@ from typing import Optional
 import cv2
 import numpy as np
 
-from ic import models, settings
+from ic.video import models, settings
 
 
 # ----- Tunables -----

@@ -3,7 +3,7 @@
 from dataclasses import dataclass
 
 import cv2
-from ic import models
+from ic.video import models
 
 
 @dataclass

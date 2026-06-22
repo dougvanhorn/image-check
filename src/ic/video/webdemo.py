@@ -1,6 +1,6 @@
 import gradio as gr
 
-from ic import pipeline
+from ic.video import pipeline
 
 
 def verify(listing_image, video):

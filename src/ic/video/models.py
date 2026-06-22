@@ -1,7 +1,7 @@
 # Load models one time here.
 from ultralytics import YOLO
 
-from ic import settings
+from ic.video import settings
 
 # ----- Models loaded once at module level -----
 _yolo_26n = YOLO(settings.YOLO_26N)

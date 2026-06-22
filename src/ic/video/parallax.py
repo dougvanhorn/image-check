@@ -33,8 +33,8 @@ import cv2
 import numpy as np
 import rich
 
-from ic import settings
-from ic import utils
+from ic.video import settings
+from ic.video import utils
 
 # Given a video, let's extract crops of the bike and test homography fit error between consecutive
 # frames.

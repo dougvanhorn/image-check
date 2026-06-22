@@ -5,7 +5,7 @@ import cv2
 import numpy as np
 from ultralytics import YOLO
 
-from ic import settings
+from ic.video import settings
 
 
 # Load YOLO once and reuse

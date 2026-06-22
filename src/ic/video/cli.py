@@ -41,7 +41,7 @@ def bike_detection(video):
 @click.argument('source', type=click.Path(exists=True))
 def annotate_yolo(source):
     """Test annotation of video frames with bounding boxes and verdicts."""
-    from ic import pipeline
+    from ic.video import pipeline
     source = pathlib.Path(source)
     copy = source.parent / f"{source.stem}_annotated{source.suffix}"
     frame_count = pipeline.annotate_video(source, copy)
@@ -52,7 +52,7 @@ def annotate_yolo(source):
 def compare_images():
     """Compare two bike images using ORB keypoint matching.
     """
-    from ic import simple
+    from ic.video import simple
     bike_1_filename = settings.VAR_DIR / 'rockhopper/img_front.jpg'
     bike_2_filename = settings.VAR_DIR / 'rockhopper/img_front.jpg'
     simple.compare_bikes(bike_1_filename, bike_2_filename)
@@ -60,7 +60,7 @@ def compare_images():
 
 @cli.command(name='pipeline')
 def pipeline_cli():
-    from ic import pipeline
+    from ic.video import pipeline
     listing_images = [
         settings.VAR_DIR / 'rockhopper/img_front.jpg',
         settings.VAR_DIR / 'rockhopper/img_left.jpg',
@@ -86,7 +86,7 @@ def pipeline_cli():
 @cli.command()
 def annotate():
     """Test annotation of video frames with bounding boxes and verdicts."""
-    from ic import pipeline
+    from ic.video import pipeline
     video_path = settings.VAR_DIR / 'rockhopper/vid_01.mov'
     listing_path = settings.VAR_DIR / 'rockhopper/img_front.jpg'
     frame = pipeline.annotate_video(video_path, listing_path)
@@ -100,14 +100,14 @@ def annotate():
 @cli.command()
 def write_video():
     """Test writing a video from generated frames."""
-    from ic import write_video
+    from ic.video import write_video
     write_video.test_write_video()
 
 
 @cli.command()
 def webdemo():
     """Launch the Gradio web demo."""
-    from ic import webdemo
+    from ic.video import webdemo
     webdemo.launch()
 
 
@@ -118,7 +118,7 @@ def exif(files):
 
     Globs are allowed.
     """
-    from ic import exif
+    from ic.video import exif
     metadata = exif.get_exif(files)
     for file_meta in metadata:
         rich.print(f"[bold]{file_meta['SourceFile']}[/bold]")
@@ -133,7 +133,7 @@ def exif(files):
 @click.argument('filename', type=click.Path(exists=True))
 def parallax(filename):
     """Test homography fit error between consecutive video frames."""
-    from ic import parallax
+    from ic.video import parallax
 
     parallax.run(filename)
 
