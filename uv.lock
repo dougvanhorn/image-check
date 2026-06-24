@@ -544,6 +544,7 @@ source = { editable = "." }
 dependencies = [
     { name = "click" },
     { name = "gradio" },
+    { name = "imagehash" },
     { name = "invisible-watermark" },
     { name = "ipython" },
     { name = "open-clip-torch" },
@@ -557,6 +558,7 @@ dependencies = [
 requires-dist = [
     { name = "click", specifier = ">=8.3.3" },
     { name = "gradio", specifier = ">=6.13.0" },
+    { name = "imagehash", specifier = ">=4.3.1" },
     { name = "invisible-watermark", specifier = ">=0.2.0" },
     { name = "ipython", specifier = ">=9.12.0" },
     { name = "open-clip-torch", specifier = ">=3.3.0" },
@@ -564,6 +566,21 @@ requires-dist = [
     { name = "pyexiftool", specifier = ">=0.5.6" },
     { name = "rich", specifier = ">=15.0.0" },
     { name = "ultralytics", specifier = ">=8.4.41" },
+]
+
+[[package]]
+name = "imagehash"
+version = "4.3.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "numpy" },
+    { name = "pillow" },
+    { name = "pywavelets" },
+    { name = "scipy" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/cd/de/5c0189b0582e21583c2a213081c35a2501c0f9e51f21f6a52f55fbb9a4ff/ImageHash-4.3.2.tar.gz", hash = "sha256:e54a79805afb82a34acde4746a16540503a9636fd1ffb31d8e099b29bbbf8156", size = 303190, upload-time = "2025-02-01T08:45:39.328Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/31/2c/5f0903a53a62029875aaa3884c38070cc388248a2c1b9aa935632669e5a7/ImageHash-4.3.2-py2.py3-none-any.whl", hash = "sha256:02b0f965f8c77cd813f61d7d39031ea27d4780e7ebcad56c6cd6a709acc06e5f", size = 296657, upload-time = "2025-02-01T08:45:36.102Z" },
 ]
 
 [[package]]
